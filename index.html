@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JIMMY STORES</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #b30000;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        header {
+            background-color: #b30000;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        
+        header p {
+            font-size: 1em;
+            margin-top: 10px;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #ff4d4d;
+            padding: 10px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav button {
+            background-color: white;
+            color: #b30000;
+            border: 2px solid #b30000;
+            padding: 10px 15px;
+            margin: 5px;
+            font-size: 0.9em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        nav button:hover {
+            background-color: #b30000;
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .container {
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .section {
+            display: none;
+            padding: 15px;
+            background-color: white;
+            border: 2px solid #b30000;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 15px auto;
+            max-width: 90%;
+        }
+        
+        .section.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        ul li {
+            margin: 10px 0;
+            font-size: 1em;
+        }
+        
+        .service-item {
+            margin-bottom: 15px;
+        }
+        
+        .service-item h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #b30000;
+        }
+        
+        .service-item p {
+            margin: 5px 0 0;
+            font-size: 0.9em;
+            color: #333;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            text-decoration: none;
+            color: white;
+            background-color: #b30000;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: #ff4d4d;
+        }
+        
+        footer {
+            background-color: #b30000;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: auto;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            position: relative;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            header p {
+                font-size: 0.9em;
+            }
+            nav button {
+                font-size: 0.8em;
+                padding: 8px 12px;
+            }
+            .section {
+                padding: 10px;
+            }
+            ul li {
+                font-size: 0.9em;
+            }
+            .social-links a {
+                font-size: 0.9em;
+                padding: 8px 12px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            header p {
+                font-size: 0.8em;
+            }
+            nav {
+                flex-direction: column;
+            }
+            nav button {
+                font-size: 0.7em;
+                padding: 6px 10px;
+                margin: 5px 0;
+            }
+            .section {
+                padding: 8px;
+            }
+            ul li {
+                font-size: 0.8em;
+            }
+            .social-links a {
+                font-size: 0.8em;
+                padding: 6px 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>JIMMY STORES</h1>
+        <i>
+        <p>Your ultimate destination for fun, creativity, and joy!</p>
+        </i>
+    </header>
+    <nav>
+        <button onclick="showSection('about')">About Us</button>
+        <button onclick="showSection('services')">Services</button>
+        <button onclick="showSection('visit')">Visit Us</button>
+    </nav>
+    <div class="container">
+        <div id="about" class="section active">
+            <B>
+            <h1>"About Jimmy Stores"</h1>
+            </B>
+            <p>At
+                <i>JIMMY STORES</i>, we bring happiness to your doorstep with our wide range of games, toys, and custom designs. Whether you 're looking for a fun family game night or unique gifts, we have it all! Our mission is to create memorable experiences
+                for families, friends, and individuals by offering high-quality products that inspire creativity and fun. We believe in the power of play and its ability to bring people closer together. Founded with a passion for games and toys.</p>
+        </div>
+        <div id="services" class="section">
+            <b>
+            <h1>-Our Services-</h1>
+            </b>
+            <div class="service-item">
+                <b> <h3>Selling Board Games</h3></b>
+                <p>Explore our collection of classic and modern board games for all ages. Perfect for family game nights and gatherings.</p>
+            </div>
+            <div class="service-item">
+                <b> <h3>Selling Card Games</h3></b>
+                <p>From traditional card games to innovative new ones, we have something for every card game enthusiast.</p>
+            </div>
+            <div class="service-item">
+                <b> <h3>Selling Party Games</h3></b>
+                <p>Make your parties unforgettable with our exciting range of party games designed for groups and fun-filled moments.</p>
+            </div>
+            <div class="service-item">
+                <b> <h3>Selling Couple Games</h3></b>
+                <p>Strengthen your bond with our specially curated couple games, perfect for date nights and anniversaries.</p>
+            </div>
+            <div class="service-item">
+                <b> <h3>Selling Toys </h3></b>
+                <p>Explore our fun, safe, and durable toys perfect for all ages. Ideal for play and creativity. </p>
+            </div>
+            <div class="service-item">
+                <b> <h3>Selling Designs</h3></b>
+                <p>Unique, custom designs to elevate your space. Creativity and style, made just for you!</p>
+            </div>
+        </div>
+
+        <div id="visit" class="section">
+            <b>
+            <h1>*Visit Us*</h1>
+            </b>
+            <div class="social-links">
+                <a href="https://www.instagram.com/jimmys.boardgames?igsh=anByeW81ZWUweXZ1" target=" _blank " rel="noopener noreferrer ">JIMMYS BOARD GAMES</a>
+                <a href="https://www.instagram.com/toys_by_jimmy?igsh=MTJvcm5hOWpiNndsaA==" target="_blank " rel="noopener noreferrer ">TOYS BY JIMMY</a>
+                <a href="https://www.instagram.com/designs_by_jimmy?igsh=azRrM3ZqMmR1bTM1" target="_blank " rel="noopener noreferrer ">DESIGNS BY JIMMY</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 JIMMY STORES. All rights reserved.</p>
+    </footer>
+    <script>
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        // Add a scroll-to-top button for better navigation
+        const scrollToTopButton = document.createElement('button');
+        scrollToTopButton.textContent = "↑ Top";
+        scrollToTopButton.style.position = "fixed";
+        scrollToTopButton.style.bottom = "20px";
+        scrollToTopButton.style.right = "20px";
+        scrollToTopButton.style.padding = "10px 15px";
+        scrollToTopButton.style.backgroundColor = "#b30000";
+        scrollToTopButton.style.color = "white";
+        scrollToTopButton.style.border = "none";
+        scrollToTopButton.style.borderRadius = "5px";
+        scrollToTopButton.style.cursor = "pointer";
+        scrollToTopButton.style.display = "none";
+        scrollToTopButton.style.zIndex = "1000";
+        scrollToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        document.body.appendChild(scrollToTopButton);
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                scrollToTopButton.style.display = "block";
+            } else {
+                scrollToTopButton.style.display = "none";
+            }
+        });
+    </script>
+</body>
+
+</html>
